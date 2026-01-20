@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算機</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="msg"></div>
+
+    <div class="calc">
+        <input type="text" id="display" value="0" readonly>
+
+        <div class="row">
+            <button onmouseenter="dodge(this)" onclick="clr()">C</button>
+            <button onmouseenter="dodge(this)" onclick="del()">←</button>
+            <button onmouseenter="dodge(this)" onclick="op('/')">÷</button>
+            <button onmouseenter="dodge(this)" onclick="op('*')">×</button>
+        </div>
+
+        <div class="row">
+            <button id="b7" onmouseenter="dodge(this)" onclick="num('7')">7</button>
+            <button id="b8" onmouseenter="dodge(this)" onclick="num('8')">8</button>
+            <button id="b9" onmouseenter="dodge(this)" onclick="num('9')">9</button>
+            <button onmouseenter="dodge(this)" onclick="op('-')">-</button>
+        </div>
+
+        <div class="row">
+            <button id="b4" onmouseenter="dodge(this)" onclick="num('4')">4</button>
+            <button id="b5" onmouseenter="dodge(this)" onclick="num('5')">5</button>
+            <button id="b6" onmouseenter="dodge(this)" onclick="num('6')">6</button>
+            <button onmouseenter="dodge(this)" onclick="op('+')">+</button>
+        </div>
+
+        <div class="row">
+            <button id="b1" onmouseenter="dodge(this)" onclick="fakeNum('1')">1</button>
+            <button id="b2" onmouseenter="dodge(this)" onclick="num('2')">2</button>
+            <button id="b3" onmouseenter="dodge(this)" onclick="fakeNum('3')">3</button>
+            <button onmouseenter="dodge(this)" onclick="calc()">=</button>
+        </div>
+
+        <div class="row">
+            <button id="b0" class="wide" onmouseenter="dodge(this)" onclick="num('0')">0</button>
+            <button onmouseenter="dodge(this)" onclick="num('.')">.</button>
+        </div>
+    </div>
+
+    <!-- ★ tsではなく js を読む -->
+    <script src="main.js"></script>
+</body>
+
+</html>

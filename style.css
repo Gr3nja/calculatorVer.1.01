@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+.calc {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    position: relative;
+    transition: all 0.3s;
+}
+
+#display {
+    width: 180px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 22px;
+    border: 1px solid #999;
+}
+
+.row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+button {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    border: 1px solid #999;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: relative;
+}
+
+button:hover {
+    background: #e0e0e0;
+}
+
+.wide {
+    width: 94px;
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-30px);
+    }
+
+    75% {
+        transform: translateX(30px);
+    }
+}
+
+.fly-away {
+    position: fixed !important;
+    z-index: 1000;
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.glitch {
+    animation: glitch 0.1s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+#msg {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 2000;
+}
